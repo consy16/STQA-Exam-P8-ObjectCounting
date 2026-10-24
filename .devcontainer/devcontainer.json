@@ -1,3 +1,4 @@
+
 {
   "name": "STQA Practical 8 - Selenium",
   "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
@@ -9,5 +10,5 @@
       ]
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y chromium chromium-driver"
+  "postCreateCommand": "if [ -f /etc/apt/sources.list.d/yarn.list ]; then sudo mv /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.disabled; fi && sudo apt-get update && sudo apt-get install -y maven chromium chromium-driver"
 }
